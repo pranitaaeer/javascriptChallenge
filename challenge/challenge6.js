@@ -10,7 +10,6 @@ console.log( "typeof null:",typeof college);
 console.log("typeof symbol:",typeof sym);
 console.log("typeof bigint:",typeof number);
 
-
 //Reference(Non-primitive )data type
 let arr=[1,2,3,4]
 console.log("typeof array:",typeof arr);
