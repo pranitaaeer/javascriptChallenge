@@ -40,12 +40,14 @@ const moreThan25=arr.myFilter((elm,i,arr)=>{
 })
 console.log(moreThan25);
 
-Array.prototype.myReduce=function(cb,init){
-    let initializer=init
-    for (let i = 0; i < this.length; i++) {
-        initializer=initializer? cb(initializer,this[i],i,this) : this[0]
-    }
-    return initializer
+Array.prototype.MyReduce=function(cb,initializer){
+  let acc=initializer
+  if(initializer === undefined) acc=this[0]
+  
+  for (let i = 0; i < this.length; i++) {
+    acc=cb(acc,this[i],i,this)
+  }
+  return acc
 }
 
 const sum=arr.myReduce((acc,curr,i,arr)=>{
