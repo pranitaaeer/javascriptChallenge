@@ -1,6 +1,13 @@
 
 const arr=[10,20,30,40,50]
 
+let arr1=[1,2,3,4,5]
+
+for(let v of arr1){
+  arr1.pop()  //[1,2]
+}
+console.log(arr1);
+
 //polyfills
 
 Array.prototype.myMap=function(cb){
