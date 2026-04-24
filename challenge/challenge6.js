@@ -29,5 +29,24 @@ console.log("typeof object:",typeof obj);
 
 
 
+console.log(parseInt("hello"));      // NaN
+console.log(Math.sqrt(-1));          // NaN
+console.log("abc" * 2);              // NaN
+console.log(undefined + 1);          // NaN
+console.log(0 / 0);                  // NaN
+
+console.log(NaN === NaN);            // false (confusing but important)
+console.log(isNaN(NaN));             // true
+console.log(Number.isNaN(NaN));      // true (better)
+
+// Trick: check NaN properly
+function isReallyNaN(value) {
+  return value !== value;  // Only NaN returns true
+}
+console.log(isReallyNaN(NaN));      // true
+console.log(isReallyNaN(5));        // false
+
+
+
 
 
