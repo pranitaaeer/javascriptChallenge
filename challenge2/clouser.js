@@ -135,3 +135,28 @@ Function.prototype.MYonce = function () {
 const result=like.apply(null, [like.MYonce()]) //context,this reference
 result()
 result()
+
+function calc(num){
+    return num*num
+}
+console.log(calc(5))
+console.log(calc(5))
+//calculate every time for same input
+
+// memoaization
+ function memo(){
+     let cache={}
+     return function (n){
+         if(cache[n]){
+          console.log("from cache")
+          return cache[n]
+         }
+         console.log("calculating...")
+         let res=n*n
+         cache[n]=res
+         return res
+     }
+ }
+ const fn=memo()
+console.log(fn(5))
+console.log(fn(5))
