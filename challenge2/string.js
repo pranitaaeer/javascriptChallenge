@@ -1,3 +1,22 @@
+let str="i love js"
+ const revstr=(str)=>{
+     let rev=""
+     for(let val of str){
+         rev=val+rev
+     }
+     return rev
+ } 
+ let gtr=[]
+ str=str.split(" ")
+ for (let elm of str){
+     if(elm.length>1){
+     let rev=revstr(elm)
+     gtr.push(rev)
+     }else gtr.push(elm)
+ }
+ str=[...gtr]
+ gtr=[]
+ console.log(String(str)) 
 
 // let string="1213"
 
