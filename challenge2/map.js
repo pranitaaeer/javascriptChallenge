@@ -1,3 +1,15 @@
+let arr=[0,1,0,3,12]
+let brr=[]
+let crr=[]
+for(let val of arr){
+    if(val===0)brr.push(val)
+    else crr.push(val)
+}
+arr=crr.concat(brr)
+console.log(arr)
+arr=crr=[]
+//console.log(crr)
+
 let arr=[1,2,3,2,4,5,1]
 let obj={}
 let dupli=[]
