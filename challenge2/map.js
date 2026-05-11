@@ -6,6 +6,7 @@ for(let j=0;j<arr.length;j+=2){
     brr.push(arr.slice(j, j+2)) 
 }
 console.log(brr)
+
 let arr=[0,1,0,3,12]
 
 let brr=[]
