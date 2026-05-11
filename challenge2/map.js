@@ -1,3 +1,16 @@
+let arr=[1,2,3,2,4,5,1]
+let obj={}
+let dupli=[]
+for(let val of arr){
+    if(obj[val]){
+        obj[val]+=1
+    }else {
+        obj[val]=1
+        dupli.push(val)
+    }
+}
+
+console.log(String(dupli.sort())) 
 
 const arr=[10,20,30,40,50]
 
