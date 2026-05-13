@@ -41,3 +41,23 @@ function largestWord(str){
 }
 str=str.split(" ")
 largestWord(str)
+
+console.log("start")
+
+function greet(username, cb){
+    setTimeout(()=>{
+        cb(`hello ${username}`) 
+    },1000)
+}
+function callbackHell(cb){
+    cb("callback hell occurs")
+}
+//console.log(greet("pranita"))
+//undefined before using cb
+const res=greet("pranu",function (ans){
+    console.log(ans)
+    callbackHell(function(cbans){
+        console.log(cbans)
+    })
+})
+console.log("stop")
