@@ -61,3 +61,13 @@ const res=greet("pranu",function (ans){
     })
 })
 console.log("stop")
+
+console.log("Start");
+const response=new Promise((resolve,reject)=>{
+    let success=true
+    if(success){
+        resolve("promise resolve")
+    }else reject("promise rejected") 
+}) 
+response.then((data)=>console.log(data)).catch((err)=>console.log(err))
+console.log("stop")
