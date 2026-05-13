@@ -96,9 +96,10 @@ function callbackHell(){
 }
 
 const ans=greet("pranita")
-ans.then((data)=>console.log(data))
-const ans2=callbackHell()
-ans2.then((data)=>console.log(data))
+ans.then((data)=>{
+    console.log(data)
+    return callbackHell() 
+}).then((data) =>{console.log(data)}
 console.log("stop")
 
 
