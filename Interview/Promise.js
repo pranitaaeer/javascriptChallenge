@@ -54,3 +54,27 @@ const result = async () => {
 };
 
 result();
+
+function greet(user){
+    return new Promise((resolve,reject)=>{
+        resolve(`hello ${user}`)
+    })
+}
+function logout(user){
+    return new Promise ((resolve,reject)=>{
+        resolve(`${user} log out successfully`)
+    }
+    )
+}
+
+function recpromises(arr){
+    if(arr.length===0)return
+    const curr=arr.shift()
+    curr.then((data)=>{console.log(data)})
+    recpromises(arr)
+}
+arr=[
+    greet("pranita"), 
+    logout("pranita")
+    ]
+    recpromises(arr)
