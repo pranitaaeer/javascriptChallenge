@@ -8,3 +8,19 @@ resolve and rejected it doesn't matter
 and rejected promises 
    4]promise.any() - return first promise which resolve
 */
+function getresult(){
+    return new Promise((resolve, reject)=>{
+        let success=true
+        if(success) resolve("promise resolve")
+        else reject(new Error("err to resolve promise"))
+    })
+}
+const res=async()=>{
+    try{
+    const ans =await getresult()
+    console.log(ans)
+    }catch(err){
+        console.log(err)
+    }
+}
+res()
