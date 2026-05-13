@@ -71,3 +71,35 @@ const response=new Promise((resolve,reject)=>{
 }) 
 response.then((data)=>console.log(data)).catch((err)=>console.log(err))
 console.log("stop")
+
+    
+//optimize callback Hell using promise
+
+console.log("start")
+
+function greet(username){
+  return new Promise ((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(`hello ${username}`) 
+    },1000)
+        
+    }) 
+}
+function callbackHell(){
+  return new Promise ((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(`callback hell occurs`) 
+    },1000)
+        
+    }) 
+    
+}
+
+const ans=greet("pranita")
+ans.then((data)=>console.log(data))
+const ans2=callbackHell()
+ans2.then((data)=>console.log(data))
+console.log("stop")
+
+
+
