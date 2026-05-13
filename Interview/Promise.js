@@ -33,3 +33,24 @@ const secondPromise=new Promise((resolve,reject)=>{
 secondPromise.then((res)=>
 {return res}
 ).then((res)=>console.log(res))
+async function loadJson(url) {
+  try {
+    const res = await fetch(url);
+
+    if (res.status === 200) {
+      return await res.json();
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+const result = async () => {
+  const data = await loadJson(
+    "https://dummyjson.com/users"
+  );
+
+  console.log(data);
+};
+
+result();
