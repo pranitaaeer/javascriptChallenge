@@ -1,4 +1,17 @@
 
+let arr=[1,2,4,5,1,4,5]
+
+let obj={}
+let brr=[]
+for(let val of arr){
+    if(!obj[val]){
+        obj[val]=1
+        brr.push(val)
+    }
+    
+}
+console.log(brr)
+
 const debouncefn=(fn, delay)=>{
     let timer=null
     
