@@ -1,4 +1,20 @@
 
+const debouncefn=(fn, delay)=>{
+    let timer=null
+    
+    return debounce=()=>{
+        clearTimeout(timer)
+        timer=setTimeout(()=>{
+            fn.apply(this)
+        },delay)
+    }
+}
+const search=()=>{
+    console.log("searching... ")
+}
+const debouncefun=debouncefn(search, 500)
+debouncefun()
+
 let str="I love JavaScript and Nodejs"
 function largestWord(str){
     let obj={}
