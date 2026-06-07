@@ -1,3 +1,12 @@
+function revstr(str){
+    let rev=" "
+    for(let j=str.length-1;j>=0;j--){
+        rev+=str[j]
+    }
+    return rev
+}
+console.log(revstr("pranita")) 
+    
 function Fibonacci(n, a=0, b=1, series=[]){
     if(n===0)return series
     series.push(a)
