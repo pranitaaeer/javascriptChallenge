@@ -10,3 +10,11 @@ function Factorial (n){
     return n*Factorial(n-1)
 }
 console.log(Factorial(5))
+    
+function range(start, end){
+   if(end<start) return []
+   const num=range(start, end-1)
+   num.push(end)
+   return num
+}
+console.log(range(0, 5))
