@@ -1,3 +1,9 @@
+function Fibonacci(n, a=0, b=1, series=[]){
+    if(n===0)return series
+    series.push(a)
+    return Fibonacci (n-1, b, a+b, series)
+}
+console.log(Fibonacci(8))
 
 
 
