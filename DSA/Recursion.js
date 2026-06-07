@@ -1,3 +1,13 @@
+function revstr(str){
+    if(str.length<=1)return str
+    
+    return str[str.length-1]+revstr (str.slice(0, str. length-1))
+}
+function isplaindrom (str){
+    const rev=revstr(str)
+    return rev===str
+}
+console.log(isplaindrom ("mom"))
 
 function recfun(arr){
     if(arr.length<=0) return 1
