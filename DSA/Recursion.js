@@ -1,11 +1,5 @@
-function Fibonacci(n){
-let series=[0, 1]
-    for (let j=2;j<n;j++){
-        series.push(series[j-1]+series[j-2])
-    }
-    return series
-}
-console.log(Fibonacci(7))
+
+
 
 function fibo(n){
     if(n<=0) return []
@@ -48,4 +42,4 @@ function range(start, end){
    num.push(end)
    return num
 }
-console.log(range(0, 5))
+console.log(range(0, 5)
