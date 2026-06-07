@@ -1,3 +1,15 @@
+function fibo(n){
+    if(n<=0) return []
+    if(n===1) return [0]
+    
+    let series=[0, 1]
+    for (let j=2;j<n;j++){
+        series.push(series[j-1]+series[j-2])
+    }
+    return series
+}
+console.log(fibo(8))
+
 function revstr(str){
     if(str.length<=1)return str
     
