@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+    <h1>Event Delegation</h1>
+    <div id="container">
+        <button class="btn" data-color="pink">pink</button>
+        <button class="btn" data-color="blue">blue</button>
+        <button class="btn" data-color="yellow">yellow</button>
+        <button class="btn" data-color="black">default</button>
+    </div><br /><br/>
+
+    <h1>Event Prpogation</h1>
+    <h2>Event bubbling</h2>
+    <div id="parent">
+        <button id="child">child</button>       
+    </div><br><br>
+
+    <h2>Event capturing</h2>
+    <div id="parent1">
+        <button id="child1">child1</button>       
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
