@@ -108,8 +108,5 @@ const ans=greet("pranita")
 ans.then((data)=>{
     console.log(data)
     return callbackHell() 
-}).then((data) =>{console.log(data)}
+}).then((data) =>{console.log(data)})
 console.log("stop")
-
-
-
