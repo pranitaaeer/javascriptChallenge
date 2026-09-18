@@ -13,3 +13,7 @@ searchInput.addEventListener("input",(e)=>{
 // })
 
 // Without debouncing, it makes an API call for every input.
+
+
+// Debouncing is a technique where a function executes only after the user
+//  stops triggering an event for a specified amount of time.
