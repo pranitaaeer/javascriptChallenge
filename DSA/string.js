@@ -43,3 +43,22 @@
 
 }
 console.log(modify("practice"))
+
+//capitialized 1st letter of word
+function convert(s) {
+        // code here
+        let ans=''
+        let capitialized=true
+        
+        for(let i=0;i<s.length;i++){
+            if(capitialized && s[i]!== " "){
+                ans+=s[i].toUpperCase()
+                capitialized=false
+            }else ans+=s[i]
+            
+            if(s[i]===" ") capitialized=true
+        }
+        return ans
+        
+    }
+console.log(convert("i love javascript") // I Love Javascript
